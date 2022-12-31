@@ -1,8 +1,11 @@
 const fetch = require("node-fetch");
 async function getDataFetch(url) {
-  // console.log(await fetch(url), { method: "GET" });
-  return await fetch(url, { method: "GET" });
+  const response = await fetch(url, { method: "GET" });
+  return await response.text();
 }
+// const test = async () => {
+//   console.log(await getDataFetch("https://www.google.com/"));
+// };
+// test();
 
-// getDataFetch("https://www.google.com/");
 module.exports = getDataFetch;
