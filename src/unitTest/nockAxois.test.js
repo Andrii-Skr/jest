@@ -1,17 +1,17 @@
-const nock = require("nock");
-const getDataAxios = require("../main/axios.cjs");
+import nock from "nock";
+import getDataAxios from "../main/axios.js";
 
 describe("test getDataAxios(url)", () => {
   const testCases = [
     {
-      in: "https://jestjs.io/",
-      expectURL: "https://jestjs.io/",
+      in: "https://jestjs.io/a/",
+      expectURL: "https://jestjs.io/a/",
       inResponse: "<div>11</div>",
       expectResponse: "<div>11</div>",
     },
     {
-      in: "https://www.google.com/",
-      expectURL: "https://www.google.com/",
+      in: "https://www.google.com/d/",
+      expectURL: "https://www.google.com/d/",
       inResponse: "<div>11</div>",
       expectResponse: "<div>11</div>",
     },

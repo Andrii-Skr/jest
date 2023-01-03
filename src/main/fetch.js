@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 async function getDataFetch(url) {
   const response = await fetch(url, { method: "GET" });
   return await response.text();
@@ -8,4 +8,4 @@ async function getDataFetch(url) {
 // };
 // test();
 
-module.exports = getDataFetch;
+export default getDataFetch;

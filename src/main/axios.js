@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 async function getDataAxios(url) {
   const response = await axios.get(url);
@@ -10,4 +10,4 @@ async function getDataAxios(url) {
 // };
 // test();
 
-module.exports = getDataAxios;
+export default getDataAxios;
